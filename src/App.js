@@ -31,8 +31,8 @@ return (
     <Navbar title="Text Convertor" mode={mode} toggleMode ={toggleMode}/>
      <div className="container my-3">
       <Textbox heading="Enter The Text.."/>
-      <About toggleMode ={toggleMode} />
      </div>
+      <About toggleMode ={toggleMode} />
     
   
     </>

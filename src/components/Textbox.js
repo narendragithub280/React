@@ -24,18 +24,18 @@ export default function Textbox(props) {
     setText(event.target.value );
   }
 
-    const handleCopyClik = () => {
-      console.log("I am copy");
-      var text = document.getElementById("my-textbox");
-      text.select( ); 
-      // text.selectionRange( 0, 99999 );
-      navigator.clipboard.writeText(text.value);
+  const handleCopyClik = () => {
+    console.log("I am copy");
+    let text = document.getElementById("my-textbox");
+    text.select( ); 
+    // text.selectionRange( 0, 99999 );
+    navigator.clipboard.writeText(text.value);
+  } 
+  const handleExtraSpaces = () => {
+    let newText  =  text.split (/[ ]+/);
+    setText(newText.join(" "));
+  }
 
-    }
-      const handleExtraSpaces = () => {
-        let newText  =  text.split (/[ ]+/);
-        setText(newText.join(" "));
-      }
   const[text, setText] = useState('');
   
   return (
